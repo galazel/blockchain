@@ -1,0 +1,41 @@
+{
+  "contractName": "Exercise2",
+  "constructorInputs": [],
+  "abi": [
+    {
+      "name": "spend",
+      "inputs": [
+        {
+          "name": "num",
+          "type": "int"
+        }
+      ]
+    }
+  ],
+  "bytecode": "OP_1 OP_NUMEQUALVERIFY OP_TXOUTPUTCOUNT OP_1 OP_GREATERTHANOREQUAL OP_VERIFY OP_0 OP_OUTPUTVALUE c409 OP_GREATERTHANOREQUAL",
+  "source": "pragma cashscript ^0.12.0;\n\ncontract Exercise2() {\n    \n    function spend(int num)\n    {\n        require(num == 1);\n        require(tx.outputs.length >= 1);\n        require(tx.outputs[0].value >= 2500);\n    }\n}",
+  "debug": {
+    "bytecode": "519dc451a26900cc02c409a2",
+    "sourceMap": "7:23:7:24;:8::26:1;8:16:8:33:0;:37::38;:16:::1;:8::40;9:27:9:28:0;:16::35:1;:39::43:0;:8::45:1",
+    "logs": [],
+    "requires": [
+      {
+        "ip": 1,
+        "line": 7
+      },
+      {
+        "ip": 5,
+        "line": 8
+      },
+      {
+        "ip": 10,
+        "line": 9
+      }
+    ]
+  },
+  "compiler": {
+    "name": "cashc",
+    "version": "0.12.0"
+  },
+  "updatedAt": "2025-11-17T07:32:30.472Z"
+}

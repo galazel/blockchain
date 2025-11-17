@@ -1,0 +1,42 @@
+{
+  "contractName": "Exercise",
+  "constructorInputs": [
+    {
+      "name": "a",
+      "type": "int"
+    },
+    {
+      "name": "b",
+      "type": "int"
+    }
+  ],
+  "abi": [
+    {
+      "name": "spend",
+      "inputs": [
+        {
+          "name": "num",
+          "type": "int"
+        }
+      ]
+    }
+  ],
+  "bytecode": "OP_2 OP_PICK OP_GREATERTHANOREQUAL OP_ROT OP_ROT OP_GREATERTHANOREQUAL OP_BOOLAND",
+  "source": "pragma cashscript ^0.12.0;\n\ncontract Exercise(int a, int b) {\n    \n    function spend(int num)\n    {\n        require(num <= a && num >= b);\n    }\n}",
+  "debug": {
+    "bytecode": "5279a27b7ba29a",
+    "sourceMap": "7:16:7:19;;:::24:1;:28::31:0;:35::36;:28:::1;:8::38",
+    "logs": [],
+    "requires": [
+      {
+        "ip": 9,
+        "line": 7
+      }
+    ]
+  },
+  "compiler": {
+    "name": "cashc",
+    "version": "0.12.0"
+  },
+  "updatedAt": "2025-11-17T07:22:16.449Z"
+}

@@ -1,0 +1,33 @@
+{
+  "contractName": "Galagar",
+  "constructorInputs": [],
+  "abi": [
+    {
+      "name": "spend",
+      "inputs": [
+        {
+          "name": "num",
+          "type": "int"
+        }
+      ]
+    }
+  ],
+  "bytecode": "OP_2 OP_NUMEQUAL",
+  "source": "pragma cashscript ^0.12.0;\n\ncontract Galagar() {\n\n   function spend(int num)\n   {\n       require(num == 2);\n   }\n}\n\n",
+  "debug": {
+    "bytecode": "529c",
+    "sourceMap": "7:22:7:23;:7::25:1",
+    "logs": [],
+    "requires": [
+      {
+        "ip": 2,
+        "line": 7
+      }
+    ]
+  },
+  "compiler": {
+    "name": "cashc",
+    "version": "0.12.0"
+  },
+  "updatedAt": "2025-11-17T05:47:14.298Z"
+}
